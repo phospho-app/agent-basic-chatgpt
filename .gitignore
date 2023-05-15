@@ -1,0 +1,14 @@
+# Ignore macosx files
+.DS_Store
+
+# Ignore python cache files
+global-exclude *.pyc
+
+# Ignore python test files
+test.py
+
+#ignore .env file
+agent/.env
+
+# Ignore globally pycache
+agent/__pycache__/

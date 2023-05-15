@@ -1,0 +1,8 @@
+{
+    "title": "Basic chatbot",
+    "project_name": "This a basic chat bot implementation. The bot should state it's name.",
+    "short_description": "Short description of the project",
+    "inputs": ["text"],
+    "outputs": ["text"],
+    "metadata": {}
+}
