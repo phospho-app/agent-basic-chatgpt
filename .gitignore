@@ -1,14 +1,11 @@
 # Ignore macosx files
 .DS_Store
 
-# Ignore python cache files
-global-exclude *.pyc
+# Ignore virtualenv
+venv/
 
-# Ignore python test files
-test.py
+# Ignore .env
+.env
 
-#ignore .env file
-agent/.env
-
-# Ignore globally pycache
-agent/__pycache__/
+# Ignore pycache
+__pycache__/
