@@ -1,12 +1,25 @@
-from phospho import Agent, Message
+# main.py
 
-# My scripts
-from myagent import my_agent
+# Load environment variables
 
-agent = Agent()
+from dotenv import load_dotenv
+load_dotenv()
 
-@agent.chat()
-def my_chat(message):
-    response = my_agent(message.content)
+# use langchain to easily interact with the OpenAI API
 
-    return Message(response)
+from langchain.schema import (
+    AIMessage,
+    HumanMessage,
+    SystemMessage
+)
+from langchain.chat_models import ChatOpenAI
+     
+
+chat = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0.3)
+messages = [
+    SystemMessage(content="You are a funny and helpful assistant."),
+    HumanMessage(content="Explain to me quantum physics."),
+]
+response=chat(messages)
+
+print(response.content,end='\n')
