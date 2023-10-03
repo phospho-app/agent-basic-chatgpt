@@ -11,6 +11,7 @@ from phospho import Agent, Message
 from dotenv import load_dotenv
 load_dotenv()
 
+
 # Define our langchain agent
 chat = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0.3)
 
