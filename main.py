@@ -4,7 +4,7 @@ from langchain.schema import (
     SystemMessage
 )
 from langchain.chat_models import ChatOpenAI
-from phospho import Agent, Message
+from phospho import Agent, Message, Client
 
 # Load environment variables
 
@@ -28,6 +28,9 @@ def my_agent(input):
 # Package it into a phospho agent
 
 agent = Agent()
+
+# Setup the phospho client
+client = Client()
 
 @agent.chat()
 def my_chat(message):
